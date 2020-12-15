@@ -1,0 +1,26 @@
+<h1 id="tableLabel">My Music Library</h1>
+
+<p>This component demonstrates songs fetching data from the server.</p>
+
+
+<p *ngIf="!music"><em>Loading...</em></p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="music">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Release Date</th>
+      <th>Artist</th>
+      <th>Genre</th>
+      <th>Label Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of music">
+      <td>{{ i.title }}</td>
+      <td>{{ i.releaseDate }}</td>
+      <td>{{ i.artist }}</td>
+      <td>{{ i.genre }}</td>
+      <td>{{ i.labelName }}</td>
+    </tr>
+  </tbody>
+</table>
